@@ -7,4 +7,4 @@ This MATLAB package is a collection of scripts allowing to generate figures in t
 
 COPYRIGHT
 
-FSSTn is copyright reserved. For further information, please contact Duong Hung PHAM at duong-hung.pham@irit.fr.
+BD-RPCA is copyright reserved. For further information, please contact Duong Hung PHAM at duong-hung.pham@irit.fr.
