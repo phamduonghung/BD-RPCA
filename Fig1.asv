@@ -1,8 +1,11 @@
 %%% code matlab of Fig1 BD-RPCA%%%%%                                              ;
 clear  all;
 close all 
-%% Let Current Folder of MATLAB contain BD-RPCA-GitHub and Add Path
-addpath(genpath(fullfile(pwd)));
+%%Let Current Folder  BD-RPCA-GitHub 
+running_folder = pwd;
+
+%% Add Path
+addpath(genpath(fullfile(running_folder,'BD-RPCA-GitHub')));
 
 %%
 load psf_simu;
@@ -83,7 +86,7 @@ rectangle('Position',[90 145 10 35],'EdgeColor','r','LineWidth',2)
 
 %result_folder = fullfile(running_folder,'BD-RPCA-GitHub','Results',sprintf('%s',nomfichier));
 
-result_folder = fullfile(pwd,'Results');
+result_folder = fullfile(running_folder,'BD-RPCA-GitHub','Results');
 
 %% Change if 1 if want to print this figure in pdf. 
 

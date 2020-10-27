@@ -1,11 +1,9 @@
 %%% code matlab of Fig2a BD-RPCA%%%%%                                              ;
 clear  all;
 close all 
-%% Modify this running_folder in your computation such that it contains BD-RPCA-GitHub 
-running_folder = 'C:\Users\dpham\ownCloud\Working\Atempo\';
+%% Let Current Folder of MATLAB contain BD-RPCA-GitHub and Add Path
+addpath(genpath(fullfile(pwd)));
 
-%% Add Path
-addpath(genpath(fullfile(running_folder,'BD-RPCA-GitHub')));
 %% A modifier
 test = 1; % For figure 2a of the paper, keep test=1
 %%
@@ -26,7 +24,7 @@ else
     seuil_tissu = 100;
     seuil_bruit = 200;
 end
-result_folder = fullfile(running_folder,'BD-RPCA-GitHub','Results');
+result_folder = fullfile(pwd,'Results');
 mkdir(result_folder)
 %% Loading data
 iHS=0; % Not run Oleg

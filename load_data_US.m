@@ -1,7 +1,7 @@
 %% Loading data US
 
 [~,name,~] = fileparts(nomfichier);
-load(fullfile(running_folder,'BD-RPCA-GitHub',sprintf('%s.mat',nomfichier)))                                ; %chargement de la matrice
+load(fullfile(pwd,'Data',sprintf('%s.mat',nomfichier)))                                ; %chargement de la matrice
 if test ==1    
     [Nz,Nx,Nt] = size(M1)                           ; %Attribution de la taille de la matrice RF
     if iHS
@@ -9,11 +9,11 @@ if test ==1
             Moy = (mean(M1(:,:,k)))' * ones(1,Nz) ; 
             M1(:,:,k) = hilbert(M1(:,:,k)-Moy')              ; %application de la transform?e de Hilbert pour passer en donn?es complexes     
         end
-        psf_fichier=fullfile(running_folder,'BD-RPCA-GitHub','psf_simu.mat');
+        psf_fichier=fullfile(pwd,'Data','psf_simu.mat');
     end
     %%% INITIALISATION DE LA MATRICE PSF    
     if iHS==0
-        psf_fichier=fullfile(running_folder,'BD-RPCA-GitHub','psf_simu.mat');
+        psf_fichier=fullfile(pwd,'Data','psf_simu.mat');
     end
     load(psf_fichier);                                %chargement de la matrice                              
     % tic 
@@ -33,7 +33,7 @@ else
     %%% INITIALISATION DE LA MATRICE PSF
     if test ==2 
         test
-        psf_fichier=fullfile(running_folder,'BD-RPCA-GitHub','psf_cerveau.mat');
+        psf_fichier=fullfile(pwd,'Data','psf_cerveau.mat');
         load(psf_fichier);                                %chargement de la matrice                             
         psf = real(double(psf(:,:)));       
         [m_hh,n_hh] = size(psf); 
@@ -41,7 +41,7 @@ else
         shift_h(1:m_hh,1:n_hh) = psf;
         H = fft2(circshift(shift_h, 1-[floor((m_hh+1)/2),floor((n_hh+1)/2)]));          
     elseif test ==3
-        psf_fichier=fullfile(running_folder,'BD-RPCA-GitHub','psf_peri.mat');
+        psf_fichier=fullfile(pwd,'Data','psf_peri.mat');
         load(psf_fichier);                                %chargement de la matrice                             
         psf = real(double(psf(:,:)));
         [m_hh,n_hh] = size(psf); 
@@ -49,7 +49,7 @@ else
         shift_h(1:m_hh,1:n_hh) = psf;
         H = fft2( circshift( shift_h, 1-[floor((m_hh+1)/2),floor((n_hh+1)/2)] ) );
     else
-        psf_fichier=fullfile(running_folder,'BD-RPCA-GitHub','psf_tumeur.mat');
+        psf_fichier=fullfile(pwd,'Data','psf_tumeur.mat');
         load(psf_fichier);                                %chargement de la matrice                             
         apsf = real(double(IQ(:,:,1)));
         [Pz,Px,Pt] = size(apsf); 

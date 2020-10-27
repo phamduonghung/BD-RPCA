@@ -1,18 +1,16 @@
 %%% code matlab of Fig2b BD-RPCA%%%%%                                              ;
 clear  all;
 close all 
-%% Modify this running_folder in your computation such that it contains BD-RPCA-GitHub 
-running_folder = 'C:\Users\dpham\ownCloud\Working\Atempo\';
+%% Let Current Folder of MATLAB contain BD-RPCA-GitHub and Add Path
+addpath(genpath(fullfile(pwd)));
 
 %% A modifier
-test = 1; % For figure 2a of the paper, keep test==1
-mm=0;
+test = 1; % For figure 2a of the paper, keep test=1
 %%
 if test ==1
     nomfichier='simu_conv' 
     seuil_tissu = 2;
     seuil_bruit = 15;
-    mm=1;
 elseif test ==2
     nomfichier='cerveau_sain'
     seuil_tissu = 100;
@@ -26,7 +24,7 @@ else
     seuil_tissu = 100;
     seuil_bruit = 200;
 end
-result_folder = fullfile(running_folder,'BD-RPCA-GitHub','Results');
+result_folder = fullfile(pwd,'Results');
 mkdir(result_folder)
 %% Loading data
 iHS=0; % Not run Oleg
@@ -65,7 +63,7 @@ FigFeatures.title=1; % Figure title 0 ou 1
 FigFeatures.result_folder = result_folder;
 FigFeatures.mm=0; 
 FigFeatures.bar=1; % Colorbar 0 or 1 
-FigFeatures.print=1; % Pdf Figure Print 0 or 1
+FigFeatures.print=0; % Pdf Figure Print 0 or 1
 FigFeatures.nomtest = 'RPCA_simu'; % Name 
 Dopplerplot(Mfinale,espace_xx,espace_zz,test,FigFeatures); 
 clear Mfinale 
