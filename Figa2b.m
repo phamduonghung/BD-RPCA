@@ -34,28 +34,37 @@ mkdir(result_folder)
 iHS=0; % Not run Oleg
 load_data_US;
 [M,m,n,p] = convert_video3d_to_2d(M1);
-%M = M/abs(max(M(:)));
+M = M/abs(max(M(:)));
 %[DR,M]=dynarange(M); 
 % show_2dvideo(M,m,n);
 
 %%
-fprintf(sprintf('performing SVD...\n'))
-tSVDStart = tic;           % pair 2: tic
-Mnew = M'*M                 ; %Matrice carr?e
-[V,D2,Vt] = svd(Mnew)       ; %Application de la SVD
-D = sqrt(D2)                ; %Matrice des valeurs singuli?res
-U = M*V/D                   ; %Calcul de la matrice spatiale des vecteurs singuliers
-fprintf('Number of singular values: %d\n', length(diag(D)))
+tRPCAStart = tic;           % pair 2: tic
+fprintf('Running RPCA....\n')
+if test==1
+    Lambda = 3./sqrt(max(Nz*Nx,Nt));
+    Lambda1 = 1./sqrt(max(Nz*Nx,Nt));
+elseif test==2
+    Lambda = 1.3*1./sqrt(max(Nz*Nx,Nt));
+    Lambda1 = 1*1./sqrt(max(Nz*Nx,Nt)); % with C=0.5*[1 1]; B=[32 24];                                  
+elseif test==3
+    Lambda = 0.9*1./sqrt(max(Nz*Nx,Nt));
+    Lambda1 = 1.15./sqrt(max(Nz*Nx,Nt));
+else         
+    Lambda = 1.2*1./sqrt(max(Nz*Nx,Nt));
+    Lambda1 = 1.1*1./sqrt(max(Nz*Nx,Nt)); % with C=0.5*[1 1]; B=[32 24];  
+end
 
-f=ones(1,Nt)                    ; %cr?ation d'un vecteur ones
-f(1:seuil_tissu)=[0]            ; %Application du seuil tissu sur le vecteur 
-f(seuil_bruit:Nt)=[0]           ; %Application du seuil bruit sur le vecteur
-If=diag(f)                      ; %Matrice diagonale identit? filtr?e par les seuils
-Mf=M*V*If*V'                    ; %Calcul de la matrice finale    
-
+[TtrueR, StrueR] = RobustPCA_Doppler(M,Lambda); %
+Mfinale=reshape(StrueR,Nz,Nx,Nt);
+FigFeatures.nomtest = 'RPCA_simu';
+Dopplerplot(Mfinale,espace_xx,espace_zz,test,FigFeatures); 
+%save(sprintf('%s/RPCA_simu.mat', result_folder),'Mfinale')
+clear Mfinale
+tRPCAEnd = toc(tRPCAStart)      % pair 2: toc
 %% AFFICHAGE DE L'IMAGE DEROULANTE SELON Nt APRES SEUILLAGE/FILTRAGE
 Mfinale=reshape(Mf,Nz,Nx,Nt)    ; 
-% save(sprintf('%s/SVD_simu.mat', result_folder),'Mfinale') % remove % if want to save the SVD result SVD.mat
+% save(sprintf('%s/SVD.mat', result_folder),'Mfinale') % remove % if want to save the SVD result SVD.mat
 
 %% Doppler de puissance
 % Figures Parameters 
@@ -63,7 +72,7 @@ FigFeatures.title=1; % Figure title 0 ou 1
 FigFeatures.result_folder = result_folder;
 FigFeatures.mm=0; 
 FigFeatures.bar=1; % Colorbar 0 or 1 
-FigFeatures.print=0; % Pdf Figure Print 0 or 1
-FigFeatures.nomtest = 'SVD_simu'; % Name 
+FigFeatures.print=1; % Pdf Figure Print 0 or 1
+FigFeatures.nomtest = 'RPCA_simu'; % Name 
 Dopplerplot(Mfinale,espace_xx,espace_zz,test,FigFeatures); 
 clear Mfinale 
