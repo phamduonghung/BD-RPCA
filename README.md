@@ -4,7 +4,7 @@ This MATLAB package is a collection of scripts allowing to generate figures in t
 
 
 Requirements: 
-To print nice pdf figures, the "export_fig" package was used, whic required software support downloaded from the following link: https://www.ghostscript.com/download/gpcldnld.html
+1. To print nice pdf figures, the "export_fig" package was used, whic required software support downloaded from the following link: https://www.ghostscript.com/download/gpcldnld.html
 
 
 
