@@ -63,7 +63,7 @@ FigFeatures.title=1; % Figure title 0 ou 1
 FigFeatures.result_folder = result_folder;
 FigFeatures.mm=0; 
 FigFeatures.bar=1; % Colorbar 0 or 1 
-FigFeatures.print=0; % Pdf Figure Print 0 or 1 through export_fig 
+FigFeatures.print=0; % Pdf Figure Print: 0 or 1 through export_fig 
 FigFeatures.nomtest = sprintf('RPCA_%s',nomfichier); % Name 
 Dopplerplot(Mfinale,espace_xx,espace_zz,test,FigFeatures); 
 clear Mfinale 
