@@ -56,15 +56,10 @@ else
 end
 
 [TtrueR, StrueR] = RobustPCA_Doppler(M,Lambda); %
-Mfinale=reshape(StrueR,Nz,Nx,Nt);
-FigFeatures.nomtest = 'RPCA_simu';
-Dopplerplot(Mfinale,espace_xx,espace_zz,test,FigFeatures); 
-%save(sprintf('%s/RPCA_simu.mat', result_folder),'Mfinale')
-clear Mfinale
 tRPCAEnd = toc(tRPCAStart)      % pair 2: toc
 %% AFFICHAGE DE L'IMAGE DEROULANTE SELON Nt APRES SEUILLAGE/FILTRAGE
-Mfinale=reshape(Mf,Nz,Nx,Nt)    ; 
-% save(sprintf('%s/SVD.mat', result_folder),'Mfinale') % remove % if want to save the SVD result SVD.mat
+Mfinale=reshape(StrueR,Nz,Nx,Nt)    ; 
+%save(sprintf('%s/RPCA_simu.mat', result_folder),'Mfinale')
 
 %% Doppler de puissance
 % Figures Parameters 
