@@ -4,7 +4,7 @@ This MATLAB package is a collection of scripts allowing to generate figures in t
 
 
 ## Notes: 
-1. To print nice pdf figures, the "export_fig" package was used, which required software support downloaded from the following link (there is also a portable version of this software): https://www.ghostscript.com/download/gpcldnld.html
+1. To print nice pdf figures, the "export_fig" package was used, which required a software support downloaded from the following link (there is also a portable version of this software): https://www.ghostscript.com/download/gpcldnld.html
 2. Run each file Fig*.m that corresponds to each figure in [1]. 
 
 
@@ -14,4 +14,4 @@ This MATLAB package is a collection of scripts allowing to generate figures in t
 
 ## Copyright
 
-BD-RPCA is copyright reserved. For further information, please contact Duong Hung PHAM at duong-hung.pham@irit.fr.
+BD-RPCA is copyright reserved. If there are issues related this package, please contact Duong Hung PHAM at duong-hung.pham@irit.fr.
