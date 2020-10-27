@@ -4,9 +4,12 @@ This MATLAB package is a collection of scripts allowing to generate figures (1 a
 
 
 ## Notes: 
-1. To print nice pdf figures, the "export_fig" package was used, which required a software support downloaded from the following link (there is also a portable version of this software): https://www.ghostscript.com/download/gpcldnld.html. In the codes, change FigFeatures.print= 1, if we want to print the figure using this package. 
-2. Set Current Folder of MATLAB being BD-RPCA-GitHub.  
-3. Run each file Fig*.m corresponding to each figure (from 1 to 2a-2e) in [1]. 
+1. Download the "simulation" data and its experimentally measured PSF from the following link: 
+https://cloud.irit.fr/index.php/s/lAJgnFBI9VNLJRS
+
+2. To print nice pdf figures, the "export_fig" package was used, which required a software support downloaded from the following link (there is also a portable version of this software): https://www.ghostscript.com/download/gpcldnld.html. In the codes, change FigFeatures.print= 1, if we want to print the figure using this package. 
+3. Set Current Folder of MATLAB being BD-RPCA-GitHub.  
+4. Run each file Fig*.m corresponding to each figure (from 1 to 2a-2e) in [1]. 
 
 
 
