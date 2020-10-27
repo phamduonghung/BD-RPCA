@@ -83,11 +83,13 @@ hold on
 rectangle('Position',[45 200 12 70],'EdgeColor','r','LineWidth',2)
 rectangle('Position',[90 145 10 35],'EdgeColor','r','LineWidth',2)
 
-result_folder = 'C:\Users\dpham\ownCloud\Working\Atempo\Latex_paper\figures\R1';
+result_folder = fullfile(running_folder,'BD-RPCA-GitHub','Results');
+
+%% Change if 1 if need to print this figure. 
 
 if 0
 export_fig(Fig, ... % figure handle
-        sprintf('%s/simuConv_new1', result_folder),... % name of output file without extension
+        sprintf('%s/simuConv', result_folder),... % name of output file without extension
         '-painters', ...      % renderer
         '-transparent', ...   % renderer
         '-pdf', ...         % file format
