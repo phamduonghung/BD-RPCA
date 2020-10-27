@@ -35,8 +35,8 @@ load_data_US;
 % show_2dvideo(M,m,n);
 
 %%
-tRPCAStart = tic;           % pair 2: tic
-fprintf('Running RPCA....\n')
+tDRPCAStart = tic;           % pair 2: tic
+fprintf('Running DRPCA....\n')
 if test==1
     Lambda = 3./sqrt(max(Nz*Nx,Nt));
     Lambda1 = 1./sqrt(max(Nz*Nx,Nt));
@@ -51,19 +51,10 @@ else
     Lambda1 = 1.1*1./sqrt(max(Nz*Nx,Nt)); % with C=0.5*[1 1]; B=[32 24];  
 end
 
-[T, S] = RobustPCA_Doppler(M,Lambda); %
-tRPCAEnd = toc(tRPCAStart)      % pair 2: toc
-%% AFFICHAGE DE L'IMAGE DEROULANTE SELON Nt APRES SEUILLAGE/FILTRAGE
-Mfinale=reshape(S,Nz,Nx,Nt)    ; 
-%save(sprintf('%s/RPCA_%s.mat', result_folder,nomfichier),'Mfinale')
-
-%% Doppler de puissance
-% Figures Parameters 
-FigFeatures.title=1; % Figure title 0 ou 1
-FigFeatures.result_folder = result_folder;
-FigFeatures.mm=0; 
-FigFeatures.bar=1; % Colorbar 0 or 1 
-FigFeatures.print=0; % Pdf Figure Print 0 or 1
-FigFeatures.nomtest = sprintf('RPCA_%s',nomfichier); % Name 
+[T, StrueD] = DRPCA(M,H,Lambda); %
+Mfinale=reshape(StrueD,Nz,Nx,Nt);
+FigFeatures.nomtest = 'DRPCA_true_H';
 Dopplerplot(Mfinale,espace_xx,espace_zz,test,FigFeatures); 
-clear Mfinale 
+save(sprintf('%s/DRPCA_simu.mat', result_folder),'Mfinale')
+clear Mfinale
+tDRPCAEnd = toc(tDRPCAStart)      % pair 2: toc   

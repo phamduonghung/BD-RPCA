@@ -51,7 +51,7 @@ Mf=M*V*If*V'                    ; %Calcul de la matrice finale
 
 %% AFFICHAGE DE L'IMAGE DEROULANTE SELON Nt APRES SEUILLAGE/FILTRAGE
 Mfinale=reshape(Mf,Nz,Nx,Nt)    ; 
-% save(sprintf('%s/SVD_simu.mat', result_folder),'Mfinale') % remove % if want to save the SVD result SVD.mat
+%save(sprintf('%s/SVD_%s.mat', result_folder,nomfichier),'Mfinale')
 
 %% Doppler de puissance
 % Figures Parameters 
@@ -60,6 +60,6 @@ FigFeatures.result_folder = result_folder;
 FigFeatures.mm=0; 
 FigFeatures.bar=1; % Colorbar 0 or 1 
 FigFeatures.print=0; % Pdf Figure Print 0 or 1
-FigFeatures.nomtest = 'SVD_simu'; % Name 
+FigFeatures.nomtest = sprintf('SVD_%s',nomfichier); % Name 
 Dopplerplot(Mfinale,espace_xx,espace_zz,test,FigFeatures); 
 clear Mfinale 

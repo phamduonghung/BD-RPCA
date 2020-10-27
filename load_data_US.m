@@ -1,5 +1,4 @@
 %% Loading data US
-
 [~,name,~] = fileparts(nomfichier);
 load(fullfile(pwd,'Data',sprintf('%s.mat',nomfichier)))                                ; %chargement de la matrice
 if test ==1    
