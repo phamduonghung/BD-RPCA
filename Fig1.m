@@ -83,6 +83,8 @@ hold on
 rectangle('Position',[45 200 12 70],'EdgeColor','r','LineWidth',2)
 rectangle('Position',[90 145 10 35],'EdgeColor','r','LineWidth',2)
 
+%result_folder = fullfile(running_folder,'BD-RPCA-GitHub','Results',sprintf('%s',nomfichier));
+
 result_folder = fullfile(running_folder,'BD-RPCA-GitHub','Results');
 
 %% Change if 1 if need to print this figure. 
