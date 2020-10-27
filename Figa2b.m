@@ -1,11 +1,9 @@
-close all;
-clear all;
-clc;
-
-%% Add Path
+%%% code matlab of Fig2b BD-RPCA%%%%%                                              ;
+clear  all;
+close all 
+%% Modify this running_folder in your computation such that it contains BD-RPCA-GitHub 
 running_folder = 'C:\Users\dpham\ownCloud\Working\Atempo\';
-addpath(genpath(fullfile(running_folder,'BD-RPCA-GitHub')));
-addpath(genpath(fullfile(running_folder,'Data')));
+
 %% A modifier
 test = 1; % For figure 2a of the paper, keep test==1
 mm=0;

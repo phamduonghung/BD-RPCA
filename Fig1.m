@@ -1,10 +1,11 @@
 %%% code matlab of Fig1 BD-RPCA%%%%%                                              ;
 clear  all;
 close all 
-%% Add Path
+%% Modify this running_folder in your computation such that it contains BD-RPCA-GitHub 
 running_folder = 'C:\Users\dpham\ownCloud\Working\Atempo\';
+
+%% Add Path
 addpath(genpath(fullfile(running_folder,'BD-RPCA-GitHub')));
-addpath(genpath(fullfile(running_folder,'Data')));
 
 %%
 load psf_simu;
@@ -87,7 +88,7 @@ rectangle('Position',[90 145 10 35],'EdgeColor','r','LineWidth',2)
 
 result_folder = fullfile(running_folder,'BD-RPCA-GitHub','Results');
 
-%% Change if 1 if need to print this figure. 
+%% Change if 1 if want to print this figure in pdf. 
 
 if 0
 export_fig(Fig, ... % figure handle

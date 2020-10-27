@@ -1,20 +1,18 @@
-close all;
-clear all;
-clc;
+%%% code matlab of Fig2a BD-RPCA%%%%%                                              ;
+clear  all;
+close all 
+%% Modify this running_folder in your computation such that it contains BD-RPCA-GitHub 
+running_folder = 'C:\Users\dpham\ownCloud\Working\Atempo\';
 
 %% Add Path
-running_folder = 'C:\Users\dpham\ownCloud\Working\Atempo\';
 addpath(genpath(fullfile(running_folder,'BD-RPCA-GitHub')));
-addpath(genpath(fullfile(running_folder,'Data')));
 %% A modifier
-test = 1; % For figure 2a of the paper, keep test==1
-mm=0;
+test = 1; % For figure 2a of the paper, keep test=1
 %%
 if test ==1
     nomfichier='simu_conv' 
     seuil_tissu = 2;
     seuil_bruit = 15;
-    mm=1;
 elseif test ==2
     nomfichier='cerveau_sain'
     seuil_tissu = 100;
