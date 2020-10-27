@@ -5,7 +5,7 @@ This MATLAB package is a collection of scripts allowing to generate figures in t
 
 ## Notes: 
 1. To print nice pdf figures, the "export_fig" package was used, which required a software support downloaded from the following link (there is also a portable version of this software): https://www.ghostscript.com/download/gpcldnld.html
-2. Run each file Fig*.m that corresponds to each figure in [1]. 
+2. Run each file Fig*.m corresponding to each figure in [1]. 
 
 
 
