@@ -4,7 +4,7 @@ This MATLAB package is a collection of scripts allowing to generate figures in t
 
 
 ## Requirements: 
-1. To print nice pdf figures, the "export_fig" package was used, which required software support downloaded from the following link (there is also portable version of this software): https://www.ghostscript.com/download/gpcldnld.html
+1. To print nice pdf figures, the "export_fig" package was used, which required software support downloaded from the following link (there is also a portable version of this software): https://www.ghostscript.com/download/gpcldnld.html
 2. 
 
 
@@ -13,6 +13,6 @@ This MATLAB package is a collection of scripts allowing to generate figures in t
 [1] D.-H. Pham, A. Basarab, I. Zemmoura, JP. Remenieras, and D. Kouame, "Joint Blind Deconvolution and Robust Principal Component Analysis for Blood Flow Estimation in Medical Ultrasound Imaging," Accepted for publication in IEEE Ultrasonics, Ferrolectrics, and Frequency Control, September 2020. Available: https://arxiv.org/abs/2007.05428.
 
 
-## COPYRIGHT
+## Copyright
 
 BD-RPCA is copyright reserved. For further information, please contact Duong Hung PHAM at duong-hung.pham@irit.fr.
