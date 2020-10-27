@@ -1,7 +1,7 @@
 %%% code matlab of Fig2b BD-RPCA%%%%%                                              ;
 clear  all;
 close all 
-%% Let Current Folder of MATLAB contain BD-RPCA-GitHub and Add Path
+%% Set Current Folder of MATLAB being BD-RPCA-GitHub and Add Path
 addpath(genpath(fullfile(pwd)));
 
 %% A modifier
