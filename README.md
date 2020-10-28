@@ -4,8 +4,8 @@ This MATLAB package is a collection of scripts allowing to generate figures (1 a
 
 
 ## Instructions: 
-1. Download the package in .zip file and then unzip it. Note that unzip folder's name is **BD-RPCA-master**.  
-2. Set **Current Folder** of MATLAB this unzip folder, i.e. **BD-RPCA-master**.  
+1. Download the package in .zip file and then unzip it. Note that its name should be **BD-RPCA-master**.  
+2. Set **Current Folder** of MATLAB to this unzip folder, i.e. **BD-RPCA-master**.  
 3. Download the "simulation" data and its experimentally measured PSF from the following link: 
 https://cloud.irit.fr/index.php/s/lAJgnFBI9VNLJRS and then put them into the folder **Data**
 4. Run each file **Fig*.m** corresponding to each figure (from Fig. 1 to Fig. 2a-2e) in [1]. 
