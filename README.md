@@ -4,14 +4,12 @@ This MATLAB package is a collection of scripts allowing to generate figures (1 a
 
 
 ## Notes: 
-1. Download .zip file and then unzip the downloaded folder. Note that unzip folder's name is **BD-RPCA-master**.  
+1. Download the package in .zip file and then unzip it. Note that unzip folder's name is **BD-RPCA-master**.  
 2. Set **Current Folder** of MATLAB this unzip folder, i.e. **BD-RPCA-master**.  
 3. Download the "simulation" data and its experimentally measured PSF from the following link: 
 https://cloud.irit.fr/index.php/s/lAJgnFBI9VNLJRS and then put in the folder **Data**
 4. Run each file **Fig*.m** corresponding to each figure (from Fig. 1 to Fig. 2a-2e) in [1]. 
 5. To print nice pdf figures, the **export_fig** package was used, which required a software support downloaded from the following link (there is also a portable version of this software): https://www.ghostscript.com/download/gpcldnld.html. In the codes, change **FigFeatures.print= 1**, if we want to print the .pdf figure when using this package. 
-
-
 
 
 [1] D.-H. Pham, A. Basarab, I. Zemmoura, JP. Remenieras, and D. Kouame, "Joint Blind Deconvolution and Robust Principal Component Analysis for Blood Flow Estimation in Medical Ultrasound Imaging," Accepted for publication in IEEE Ultrasonics, Ferrolectrics, and Frequency Control, September 2020. Available: https://arxiv.org/abs/2007.05428.
