@@ -11,6 +11,11 @@ mkdir(result_folder)
 iHS=0; % Not run Oleg
 load_data_US;
 %% ideal simulation figure
+FigFeatures.title=1;
+FigFeatures.result_folder = result_folder;
+FigFeatures.mm=0;
+FigFeatures.bar=1;
+FigFeatures.print=0;
 FigFeatures.nomtest = 'ground_truth';
 IlogPWTD = -35*zeros(Nz,Nx,Nt);
 IlogPWTD(200:270,45:58,:)=1;
