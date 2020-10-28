@@ -1,4 +1,4 @@
-%%% code matlab of Fig2a BD-RPCA%%%%%                                              ;
+%%% code matlab of Fig2a: SVD%%%%%                                              ;
 clear  all;
 close all 
 %% Set Current Folder of MATLAB being BD-RPCA-GitHub and Add Path
