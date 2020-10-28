@@ -5,7 +5,7 @@ close all
 addpath(genpath(fullfile(pwd)));
 
 %% A modifier
-test = 3; % For figure 2a of the paper, keep test=1
+test = 1; % For figure 2a of the paper, keep test=1
 %%
 if test ==1
     nomfichier='simu_conv' 
