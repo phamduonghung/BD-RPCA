@@ -8,7 +8,7 @@ This MATLAB package is a collection of scripts allowing to generate figures (1 a
 https://cloud.irit.fr/index.php/s/lAJgnFBI9VNLJRS and then put in the folder **Data**
 2. Set **Current Folder** of MATLAB being **BD-RPCA-GitHub**.  
 3. Run each file **Fig*.m** corresponding to each figure (from Fig. 1 to Fig. 2a-2e) in [1]. 
-4. To print nice pdf figures, the **export_fig** package was used, which required a software support downloaded from the following link (there is also a portable version of this software): https://www.ghostscript.com/download/gpcldnld.html. In the codes, change **FigFeatures.print= 1**, if we want to print the figure using this package. 
+4. To print nice pdf figures, the **export_fig** package was used, which required a software support downloaded from the following link (there is also a portable version of this software): https://www.ghostscript.com/download/gpcldnld.html. In the codes, change **FigFeatures.print= 1**, if we want to print the .pdf figure when using this package. 
 
 
 
