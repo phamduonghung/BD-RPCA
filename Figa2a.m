@@ -13,7 +13,6 @@ seuil_bruit = 15;
 result_folder = fullfile(pwd,'Results');
 mkdir(result_folder)
 %% Loading data
-iHS=0; % Not run Oleg
 load_data_US;
 [M,m,n,p] = convert_video3d_to_2d(M1);
 %% SVD running

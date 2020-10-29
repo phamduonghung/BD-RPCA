@@ -1,4 +1,5 @@
 %% Loading data US
+iHS=0; % Not run Oleg
 [~,name,~] = fileparts(nomfichier);
 load(fullfile(pwd,'Data',sprintf('%s.mat',nomfichier)))                                ; %chargement de la matrice
 if test ==1    

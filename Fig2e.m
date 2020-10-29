@@ -8,7 +8,6 @@ nomfichier='simu_conv'
 result_folder = fullfile(pwd,'Results');
 mkdir(result_folder)
 %% Loading data
-iHS=0; % Not run Oleg
 load_data_US;
 %% ideal simulation figure
 FigFeatures.title=1;
