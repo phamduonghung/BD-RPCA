@@ -5,7 +5,7 @@ close all
 addpath(genpath(fullfile(pwd)));
 
 %% A modifier
-test = 1; % For figure 2a of the paper, keep test=1
+test = 1; % For figure 2a of the paper, keep test=1 % For others (6a-6h), change test=2 or 3
 %%
 if test ==1
     nomfichier='simu_conv' 
@@ -15,11 +15,7 @@ elseif test ==2
     nomfichier='cerveau_sain'
     seuil_tissu = 100;
     seuil_bruit = 150;
-elseif test ==3
-    nomfichier='peri' 
-    seuil_tissu = 100;
-    seuil_bruit = 150;
-else 
+else
     nomfichier='tumeur'
     seuil_tissu = 100;
     seuil_bruit = 200;
