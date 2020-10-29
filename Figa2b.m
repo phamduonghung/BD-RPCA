@@ -26,9 +26,6 @@ mkdir(result_folder)
 iHS=0; % Not run Oleg
 load_data_US;
 [M,m,n,p] = convert_video3d_to_2d(M1);
-%M = M/abs(max(M(:)));
-%[DR,M]=dynarange(M); 
-% show_2dvideo(M,m,n);
 
 %%
 tRPCAStart = tic;           % pair 2: tic
