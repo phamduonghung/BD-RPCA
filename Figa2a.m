@@ -5,28 +5,18 @@ close all
 addpath(genpath(fullfile(pwd)));
 
 %% A modifier
-test = 1; % For figure 2a of the paper, keep test=1 % For others (6a-6h), change test=2 or 3
-%%
-if test ==1
-    nomfichier='simu_conv' 
-    seuil_tissu = 2;
-    seuil_bruit = 15;
-elseif test ==2
-    nomfichier='cerveau_sain'
-    seuil_tissu = 100;
-    seuil_bruit = 150;
-else
-    nomfichier='tumeur'
-    seuil_tissu = 100;
-    seuil_bruit = 200;
-end
+test = 1; % For figure 2a of the paper, keep test=1
+%% Some parameters
+nomfichier='simu_conv' 
+seuil_tissu = 2;
+seuil_bruit = 15;
 result_folder = fullfile(pwd,'Results');
 mkdir(result_folder)
 %% Loading data
 iHS=0; % Not run Oleg
 load_data_US;
 [M,m,n,p] = convert_video3d_to_2d(M1);
-%%
+%% SVD running
 fprintf(sprintf('performing SVD...\n'))
 tSVDStart = tic;           % pair 2: tic
 Mnew = M'*M                 ; %Matrice carr?e
