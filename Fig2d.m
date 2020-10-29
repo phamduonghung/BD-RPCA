@@ -34,7 +34,7 @@ fprintf('Initialization RPCA....\n')
 tRPCAEnd = toc(tRPCAStart)      % pair 2: toc
 %%
 fprintf('Running estimated initial PSF ....\n')
-max_iter = 2;
+max_iter = 3;
 Mt = reshape(M-T0,Nz,Nx,Nt);
 M11 = squeeze(mean(Mt,3));
 [H,psf0] = Hestimate(M11,Nz,Nx,Nt);
