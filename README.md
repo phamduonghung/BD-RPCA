@@ -9,7 +9,8 @@ This MATLAB package is a collection of scripts allowing to generate figures (1 a
 3. Download all "simulation" data from the following link: 
 https://cloud.irit.fr/index.php/s/lAJgnFBI9VNLJRS and then put them into the folder **Data**
 4. Run each file **Fig?.m** corresponding to each figure (from Fig. 1 to Fig. 2a-2e) in [1]. 
-5. To print nice pdf figures, the **export_fig** package was used, which required a software support downloaded from the following link (there is also a portable version of this software): https://www.ghostscript.com/download/gpcldnld.html. In the codes, change **FigFeatures.print= 1** if you want to print the .pdf figure when using this package. 
+5. Fig. 6a to Fig. 6h of real dadasets (healthy brain, tumor, peritumoral) in [1] can be obtained by change **test = (2,3 or 4)** in the files **Fig?.m**.
+6. To print nice pdf figures, the **export_fig** package was used, which required a software support downloaded from the following link (there is also a portable version of this software): https://www.ghostscript.com/download/gpcldnld.html. In the codes, change **FigFeatures.print= 1** if you want to print the .pdf figure when using this package. 
 
 
 [1] D.-H. Pham, A. Basarab, I. Zemmoura, JP. Remenieras, and D. Kouame, "Joint Blind Deconvolution and Robust Principal Component Analysis for Blood Flow Estimation in Medical Ultrasound Imaging," *Accepted for publication in IEEE Ultrasonics, Ferrolectrics, and Frequency Control*, September 2020. Available: https://arxiv.org/abs/2007.05428.
