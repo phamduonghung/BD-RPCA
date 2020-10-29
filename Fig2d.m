@@ -55,7 +55,7 @@ for iter = 1:max_iter
                    
     % Stop Condition
     Z1 = x-xtmp;    
-    err(1,iter) = norm(Z1, 'fro') / normM  
+    err(1,iter) = norm(Z1, 'fro') / normM; 
     xtmp=x;   
     
     if (err(1,iter) > tol)    
