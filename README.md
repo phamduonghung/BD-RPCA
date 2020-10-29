@@ -4,7 +4,7 @@ This MATLAB package is a collection of scripts allowing to generate figures (1 a
 
 
 ## Instructions: 
-1. Download the package in .zip file (click green Code above) and then unzip it. Note that its name should be **BD-RPCA**.  
+1. Download the package in .zip file (click green Code above) and then unzip it. Note that the name of the unzipped folder should be **BD-RPCA**.  
 2. Set **Current Folder** of MATLAB to this unzipped folder, i.e. **BD-RPCA**.  
 3. Download all "simulation" data from the following link: 
 https://cloud.irit.fr/index.php/s/lAJgnFBI9VNLJRS and then put them into the folder **Data**
