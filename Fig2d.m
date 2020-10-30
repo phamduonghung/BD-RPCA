@@ -22,7 +22,7 @@ tBDRPCAStart = tic;           % pair 2: tic
 %% Lambda1 Parameters
 Lambda = 3./sqrt(max(Nz*Nx,Nt));
 Lambda1 = 1./sqrt(max(Nz*Nx,Nt));
-%%
+%% Initialization RPCA
 tRPCAStart = tic;           % pair 2: tic
 fprintf('Initialization RPCA....\n')
 [T0, ~] = RobustPCA_Doppler(M,Lambda); %
