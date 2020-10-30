@@ -29,6 +29,7 @@ f(1:seuil_tissu)=[0]            ; %Application du seuil tissu sur le vecteur
 f(seuil_bruit:Nt)=[0]           ; %Application du seuil bruit sur le vecteur
 If=diag(f)                      ; %Matrice diagonale identit? filtr?e par les seuils
 Mf=M*V*If*V'                    ; %Calcul de la matrice finale    
+tRPCAEnd = toc(tSVDStart)      % pair 2: toc
 
 %% AFFICHAGE DE L'IMAGE DEROULANTE SELON Nt APRES SEUILLAGE/FILTRAGE
 Mfinale=reshape(Mf,Nz,Nx,Nt)    ; 

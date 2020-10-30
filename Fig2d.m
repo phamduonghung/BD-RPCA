@@ -12,17 +12,12 @@ mkdir(result_folder)
 %% Loading data
 load_data_US;
 [M,m,n,p] = convert_video3d_to_2d(M1);
-
 %% Some figure parameters
 FigFeatures.title=1;
 FigFeatures.result_folder = result_folder;
 FigFeatures.mm=0;
 FigFeatures.bar=1;
 FigFeatures.print=0;
-
-%% APPLICATION DE LA BDRPCA
-M = reshape(M1(:),Nz*Nx,Nt) ; %Construction de la matrice de Casorati
-
 tBDRPCAStart = tic;           % pair 2: tic
 %% Lambda1 Parameters
 Lambda = 3./sqrt(max(Nz*Nx,Nt));
