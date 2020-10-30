@@ -1,0 +1,1 @@
+The results of all simulation will be generated and stored in this folder. 
