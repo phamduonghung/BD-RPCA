@@ -12,14 +12,14 @@ mkdir(result_folder)
 %% Loading data
 load_data_US;
 [M,m,n,p] = convert_video3d_to_2d(M1);
-%% Some figure parameters
+%% Figure parameters
 FigFeatures.title=1;
 FigFeatures.result_folder = result_folder;
 FigFeatures.mm=0;
 FigFeatures.bar=1;
 FigFeatures.print=0;
 tBDRPCAStart = tic;           % pair 2: tic
-%% Lambda1 Parameters
+%% Lambda Parameters
 Lambda = 3./sqrt(max(Nz*Nx,Nt));
 Lambda1 = 1./sqrt(max(Nz*Nx,Nt));
 %% Initialization RPCA
