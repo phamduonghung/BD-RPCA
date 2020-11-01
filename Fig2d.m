@@ -22,7 +22,7 @@ tBDRPCAStart = tic;           % pair 2: tic
 %% Lambda Parameters
 Lambda = 3./sqrt(max(Nz*Nx,Nt));
 Lambda1 = 1./sqrt(max(Nz*Nx,Nt));
-%% Initialization RPCA
+%% Initialization using RPCA
 tRPCAStart = tic;           % pair 2: tic
 fprintf('Initialization RPCA....\n')
 [T0, ~] = RobustPCA_Doppler(M,Lambda); %
@@ -39,7 +39,7 @@ clear Mt M11
 tol  = 1e-3;
 xtmp = M;
 normM = norm(M, 'fro');
-max_iter = 20;
+max_iter = 3;
 err = zeros(1,max_iter);
 
 for iter = 1:max_iter
