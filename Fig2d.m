@@ -17,7 +17,7 @@ FigFeatures.title=1; % Figure title 0 ou 1
 FigFeatures.result_folder = result_folder;
 FigFeatures.mm=0; 
 FigFeatures.bar=1; % Colorbar 0 or 1 
-FigFeatures.print=1; % Pdf Figure Print 0 or 1 through export_fig 
+FigFeatures.print=0; % Pdf Figure Print 0 or 1 through export_fig 
 %% Lambda Parameters
 Lambda = 3./sqrt(max(Nz*Nx,Nt));
 Lambda1 = 1./sqrt(max(Nz*Nx,Nt));
