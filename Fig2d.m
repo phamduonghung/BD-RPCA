@@ -13,11 +13,11 @@ mkdir(result_folder)
 load_data_US;
 [M,m,n,p] = convert_video3d_to_2d(M1);
 %% Figure parameters
-FigFeatures.title=1;
+FigFeatures.title=1; % Figure title 0 ou 1
 FigFeatures.result_folder = result_folder;
-FigFeatures.mm=0;
-FigFeatures.bar=1;
-FigFeatures.print=0;
+FigFeatures.mm=0; 
+FigFeatures.bar=1; % Colorbar 0 or 1 
+FigFeatures.print=0; % Pdf Figure Print 0 or 1 through export_fig 
 tBDRPCAStart = tic;           % pair 2: tic
 %% Lambda Parameters
 Lambda = 3./sqrt(max(Nz*Nx,Nt));
@@ -29,19 +29,18 @@ fprintf('Initialization RPCA....\n')
 tRPCAEnd = toc(tRPCAStart)      % pair 2: toc
 %%
 fprintf('Running estimated initial PSF ....\n')
-max_iter = 3;
 Mt = reshape(M-T0,Nz,Nx,Nt);
 M11 = squeeze(mean(Mt,3));
 [H,psf0] = Hestimate(M11,Nz,Nx,Nt);
 fprintf('Initialized PSF size: %d-%d\n',size(psf0,1),size(psf0,2))
-clear Mt M11 
+clear Mt M11
 
-%% Stop condition
+% Stop condition
 tol  = 1e-3;
 xtmp = M;
-Ttmp = T0;
-err = zeros(1,max_iter);
 normM = norm(M, 'fro');
+max_iter = 20;
+err = zeros(1,max_iter);
 
 for iter = 1:max_iter
     fprintf('Running BDRPCA for iteration %d....\n',iter)
@@ -58,9 +57,10 @@ for iter = 1:max_iter
         fprintf('Running estimated PSF for iteration %d....\n',iter+1)
         [H,psf1] = Hestimate(M11,Nz,Nx,Nt); 
         fprintf('PSF size for iteration %d: %d-%d\n',iter+1,size(psf1,1),size(psf1,2))         
-    else 
-        break;
-    end    
+    end  
+    if (err(1,iter) < tol) || (iter>=2 &&(err(1,iter)>err(1,iter-1)))
+        break
+    end  
     clear Mt M11 psf1
 end
 tBDRPCAEnd = toc(tBDRPCAStart)      % pair 2: toc
