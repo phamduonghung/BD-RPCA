@@ -12,7 +12,7 @@ https://cloud.irit.fr/index.php/s/846gUKURnYbehVl and then put them into the fol
 5. To print nice pdf figures, the **export_fig** package was used, which required a supporting software downloaded from the following link (there is also a portable version of this software): https://www.ghostscript.com/download/gpcldnld.html. In the codes, change **FigFeatures.print= 1** if you want to print the .pdf figure using this package. 
 
 
-[1] D.-H. Pham, A. Basarab, I. Zemmoura, JP. Remenieras, and D. Kouame, "Joint Blind Deconvolution and Robust Principal Component Analysis for Blood Flow Estimation in Medical Ultrasound Imaging," *Accepted for publication in IEEE Ultrasonics, Ferrolectrics, and Frequency Control*, September 2020. Available: https://arxiv.org/pdf/2007.05428.pdf.
+[1] D.-H. Pham, A. Basarab, I. Zemmoura, JP. Remenieras, and D. Kouame, "Joint Blind Deconvolution and Robust Principal Component Analysis for Blood Flow Estimation in Medical Ultrasound Imaging," in *IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control*,vol. 68, no. 4, pp. 969-978, April 2021. Available: https://arxiv.org/pdf/2007.05428.pdf.
 
 
 ## Copyright
